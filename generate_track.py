@@ -1,12 +1,11 @@
 import itertools
 
-from geopy.distance import great_circle
 import geopandas as gpd
 import numpy as np
 
 from bokeh.io import export_png
 from bokeh.models import ColumnDataSource, PanTool, WheelZoomTool
-from bokeh.plotting import figure, show
+from bokeh.plotting import figure, save
 
 from distance import distance
 
@@ -52,4 +51,4 @@ for idx, t in track.iterrows():
                  color=next(colors))
 
 # export_png(fig, filename='map.png', width=1200, height=600)
-show(fig)
+save(fig, 'index.html', title='England Coast Path Tracks')

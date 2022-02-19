@@ -1,5 +1,6 @@
 import numpy as np
 
+
 def distance(*, lon, lat):
     """
     Calculate the great circle distance in kilometers between a set of points
