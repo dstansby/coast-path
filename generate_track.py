@@ -51,4 +51,4 @@ for idx, t in track.iterrows():
                  color=next(colors))
 
 # export_png(fig, filename='map.png', width=1200, height=600)
-save(fig)
+save(fig, 'index.html', title='England Coast Path Tracks')
