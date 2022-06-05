@@ -3,3 +3,6 @@
 
 *.DS_Store
 *.pyc
+
+dems/*
+dem_tmp.tif

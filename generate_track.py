@@ -7,7 +7,7 @@ from bokeh.io import export_png
 from bokeh.models import ColumnDataSource, PanTool, WheelZoomTool
 from bokeh.plotting import figure, save
 
-from distance import distance
+from distance import total_distance
 
 track = gpd.read_file('SW_Coast_Path_Full.json')
 track = track.sort_values('title')
@@ -43,7 +43,7 @@ for idx, t in track.iterrows():
         lon = [c[0] for c in coords]
         lat = [c[1] for c in coords]
 
-        d = "{:0.2f} km".format(distance(lon=lon, lat=lat))
+        d = "{:0.2f} km".format(total_distance(lon=lon, lat=lat))
         source = ColumnDataSource({'x': lon,
                                    'y': lat,
                                    'distance': [d] * len(lon)})
