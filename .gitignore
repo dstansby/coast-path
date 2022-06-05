@@ -5,3 +5,4 @@
 *.pyc
 
 dems/*
+dem_tmp.tif
