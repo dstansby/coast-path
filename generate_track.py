@@ -20,8 +20,8 @@ fig = figure(x_axis_type="mercator", y_axis_type="mercator",
                        ('Distance', '@distance')],
              tools=[pan, wheel],
              toolbar_location=None,
-             plot_width=600,
-             plot_height=300)
+             width=600,
+             height=300)
 fig.aspect_scale = 1
 fig.match_aspect = True
 fig.axis.visible = False
