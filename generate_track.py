@@ -45,7 +45,7 @@ for idx, t in track.iterrows():
 
         d = "{:0.2f} km".format(total_distance(lon=lon, lat=lat))
         source = ColumnDataSource({'x': lon,
-                                   'y': lat,
+                                   'y': np.sin(np.deg2rad(lat)) * lat,
                                    'distance': [d] * len(lon)})
         fig.line('x', 'y', line_width=1.5, name=t['title'], source=source,
                  color=next(colors))
